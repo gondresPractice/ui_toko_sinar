@@ -9,13 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/pending"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-52dp"
+        tools:layout_editor_absoluteY="-343dp">
 
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -28,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/shape_kode"
                     android:elevation="2dp"
                     android:padding="15dp">
@@ -64,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/kodeToko"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="3dp"
                     android:text="Toko Sumber Jaya"
                     android:textColor="@color/white"
                     android:textSize="25dp"
@@ -84,312 +86,386 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:elevation="3dp"
-                android:background="@drawable/shape_notif"
-                android:layout_marginTop="200dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginStart="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp">
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_notif"
+                android:elevation="3dp">
 
                 <TextView
-                    android:layout_marginTop="5dp"
                     android:id="@+id/purchase"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="25dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Purchase Order PO"/>
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Purchase Order PO"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_marginTop="5dp"
                     android:id="@+id/pending"
-                    android:background="@color/pending"
-                    android:padding="15dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_below="@id/purchase"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_below="@id/purchase"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/pending"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pending"/>
+                        android:text="Pending" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="29"
-                        android:textStyle="bold"
-                        android:textSize="25dp"/>
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="5dp"
                     android:id="@+id/proses"
-                    android:background="@color/proses"
-                    android:padding="15dp"
-                    android:layout_marginLeft="0dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/purchase"
                     android:layout_alignLeft="@id/pending"
                     android:layout_marginStart="160dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/proses"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dalam Proses"/>
+                        android:text="Dalam Proses" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="61"
-                        android:textStyle="bold"
-                        android:textSize="25dp"/>
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/total"
-                    android:padding="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_below="@id/pending"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_below="@id/pending"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
                     <TextView
-                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Total Tagihan"/>
+                        android:text="Total Tagihan"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Rp. 29.000.000"
-                        android:textStyle="bold"
                         android:textColor="@color/red"
-                        android:textSize="20dp"/>
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/bayar"
-                    android:padding="6dp"
-                    android:background="@drawable/shape_bayar"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_below="@id/proses"
-                    android:layout_alignParentRight="true"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_below="@id/proses"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shape_bayar"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
 
                     <ImageView
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="0dp"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:src="@drawable/send"/>
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:src="@drawable/send" />
 
                     <TextView
-                        android:layout_marginLeft="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
                         android:text="Bayar"
-                        android:textStyle="normal"
                         android:textColor="@color/primary"
-                        android:textSize="18dp"/>
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
                 </LinearLayout>
             </RelativeLayout>
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
             android:orientation="horizontal">
+
             <LinearLayout
-                android:background="@drawable/shape_icons"
+                android:layout_width="100dp"
+                android:layout_height="105dp"
                 android:layout_marginTop="20dp"
-                android:padding="12dp"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_launcher_background"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
+                android:background="@drawable/shape_icons"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/shape_icons_two">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/notes" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Ajukan\nPO"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:text="Ajukan\nPO"/>
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/shape_icons"
+                android:layout_width="100dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:padding="12dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_launcher_background"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_icons_three"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/shape_icons_two">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/notes" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Riwayat\nPO"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:text="Riwayat\nPO"/>
+                    android:textColor="@color/primary"
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/shape_icons"
+                android:layout_width="100dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:padding="12dp"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_launcher_background"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
+                android:background="@drawable/shape_icons_three"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/shape_icons_two">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/notes" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Riwayat\nBayar"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:text="Riwayat\nBayar"/>
+                    android:textColor="@color/primary"
+                    android:textSize="13sp" />
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginLeft="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal">
+
             <LinearLayout
-                android:background="@drawable/shape_icons"
+                android:layout_width="100dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:padding="12dp"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_launcher_background"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/shape_icons_three"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/shape_icons_two">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/notes" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Riwayat\nPesanan"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:text="Ajukan\nPO"/>
+                    android:textColor="@color/primary"
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:background="@drawable/shape_icons"
+                android:layout_width="100dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:padding="12dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_launcher_background"/>
-                <TextView
-                    android:layout_marginLeft="18dp"
+                android:background="@drawable/shape_icons_three"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/shape_icons_two">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/notes" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="Daftar\nBayar"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:text="Riwayat\nPO"/>
+                    android:textColor="@color/primary"
+                    android:textSize="13sp" />
             </LinearLayout>
 
 
         </LinearLayout>
 
         <RelativeLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
+                android:background="@color/white"
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="0dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:src="@drawable/bag" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Data Sales" />
+                        android:text="Data Sales"
+                        android:textColor="@color/primary" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="180dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="0dp"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:src="@drawable/profile" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Akun" />
+                        android:text="Akun"
+                        android:textColor="@color/primary" />
                 </LinearLayout>
 
 
             </LinearLayout>
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="150dp"
-                android:layout_marginBottom="20dp"
-                android:src="@drawable/ic_launcher_background"/>
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_home">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/home" />
+            </RelativeLayout>
+
         </RelativeLayout>
     </LinearLayout>
 
