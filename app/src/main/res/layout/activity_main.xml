@@ -44,8 +44,8 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
@@ -99,7 +99,7 @@
                     android:id="@+id/purchase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:text="Purchase Order PO"
                     android:textSize="16dp"
@@ -110,7 +110,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/purchase"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@color/pending"
                     android:orientation="vertical"
@@ -134,10 +134,9 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/purchase"
-                    android:layout_alignLeft="@id/pending"
-                    android:layout_marginStart="160dp"
-                    android:layout_marginLeft="0dp"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
                     android:background="@color/proses"
                     android:orientation="vertical"
                     android:padding="15dp">
@@ -160,7 +159,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/pending"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="20dp"
                     android:orientation="vertical"
                     android:padding="15dp">
@@ -206,7 +205,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Bayar"
                         android:textColor="@color/primary"
-                        android:textSize="18dp"
+                        android:textSize="16sp"
                         android:textStyle="normal" />
                 </LinearLayout>
             </RelativeLayout>
@@ -398,16 +397,15 @@
         </LinearLayout>
 
         <RelativeLayout
-
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="0dp">
 
             <LinearLayout
-                android:background="@color/white"
-                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/white"
                 android:orientation="horizontal">
 
                 <LinearLayout
